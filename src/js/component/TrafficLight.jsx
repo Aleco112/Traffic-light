@@ -5,14 +5,16 @@ export function TrafficLight(props) {
 		<div className="container">
 			<div
 				onClick={() => setOn("Red")}
-				className={on == "Red" ? "Red on" : "Red"}></div>
+				className={props.color == "Red" ? "Red on" : "Red"}></div>
 
 			<div
 				onClick={() => setOn("Yellow")}
-				className={on == "Yellow" ? "Yellow on" : "Yellow"}></div>
+				className={
+					props.color == "Yellow" ? "Yellow on" : "Yellow"
+				}></div>
 			<div
 				onClick={() => setOn("Green")}
-				className={on == "Green" ? "Green on" : "Green"}></div>
+				className={props.color == "Green" ? "Green on" : "Green"}></div>
 		</div>
 	);
 }
