@@ -9,4 +9,17 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+
+let color = "Red";
+function setColor() {
+	if (color == "Red") {
+		color = "Yellow";
+	} else if (color == "Yellow") {
+		color = "Green";
+	} else if (color == "Green") {
+		color = "Red";
+	}
+	ReactDOM.render(<Home color={color} />, document.querySelector("#app"));
+}
+
+setInterval(setColor, 3000);
